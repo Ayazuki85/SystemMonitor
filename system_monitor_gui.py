@@ -65,14 +65,7 @@ class NetworkSpeedMonitor:
             'max_upload': format_size(self.max_upload).replace('/s', '')
         }
     
-    def reset_max(self):
-        self.max_download = 0
-        self.max_upload = 0
-
 network_monitor = NetworkSpeedMonitor()
-
-def get_network_speed():
-    return network_monitor.get_speed()
 
 
 def get_cpu_usage():
@@ -227,9 +220,6 @@ class SpeedBar(ctk.CTkFrame):
         elif size >= 1024:
             return f"{size / 1024:.2f} KB/s"
         return f"{size:.0f} B/s"
-    
-    def reset_max(self):
-        self.max_speed = 1024 * 1024
 
 
 class SystemMonitorApp:
@@ -306,7 +296,7 @@ class SystemMonitorApp:
             memory = get_memory_usage()
             gpu = get_gpu_usage()
             latency = get_network_latency()
-            network_speed = get_network_speed()
+            network_speed = network_monitor.get_speed()
             
             self.root.after(0, lambda: self.display_data(cpu, memory, gpu, latency, network_speed))
         
