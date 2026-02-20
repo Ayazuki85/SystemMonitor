@@ -28,7 +28,7 @@
 ### 1. 克隆或下载项目
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Ayazuki85/SystemMonitor.git
 cd SystemMonitor
 ```
 
@@ -223,7 +223,8 @@ MIT License
 
 ## 致谢
 
-- [psutil](https://github.com/giampaolo/psutil) - 跨平台系统信息库
-- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) - 现代化 Tkinter 界面
-- [PyInstaller](https://github.com/pyinstaller/pyinstaller) - Python 打包工具
-- [PyNVML](https://github.com/gpuopenanalytics/pynvml) - NVIDIA 管理库
+- [psutil](https://github.com/giampaolo/psutil) 
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) 
+- [PyInstaller](https://github.com/pyinstaller/pyinstaller) 
+- [PyNVML](https://github.com/gpuopenanalytics/pynvml)
+- [opencode](https://github.com/anomalyco/opencode)
